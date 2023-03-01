@@ -1,11 +1,20 @@
 {
-  "name": "#{schedule}",
-  "private": true,
-  "dependencies": {
-    "@rails/ujs": "^6.0.0",
-    "turbolinks": "^5.2.0",
-    "@rails/activestorage": "^6.0.0",
-    "@rails/actioncable": "^6.0.0"
+  "name": "Schedule",
+  "packageManager": "yarn@4.0.0-rc.39",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "babel-cli": "^6.26.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3"
   },
-  "version": "0.1.0"
+  "dependencies": {
+    "@rails/activestorage": "^7.0.4-2",
+    "@rails/ujs": "^7.0.4-2",
+    "@rails/webpacker": "5.4.4",
+    "babel-plugin-macros": "^3.1.0",
+    "turbolinks": "^5.2.0"
+  }
 }
