@@ -1,0 +1,51 @@
+<% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<body>
+    <div class = "container">
+        <h3>予定一覧</h3>
+        <button class="button"><%= link_to "新規追加", :new_plan %></button>
+    </div>
+</body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>タイトル</th>
+                <th>開始日</th>
+                <th>終了日</th>
+                <th>終日</th>
+                <th>更新日時</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @plans.each do |plan| %>
+                <tr>
+                    <td><%= plan.id %></td>
+                    <td><%= plan.title %></td>
+                    <td><%= plan.start_date.present? ? plan.start_date.strftime("%Y年%m月%d日") : "" %></td>
+                    <td><%= plan.end_date.present? ? plan.end_date.strftime("%Y年%m月%d日") : "" %></td>
+                    <td><%= plan.allday ? "○" : "" %></td>
+                    <td><%= plan.updated_at.to_s(:datetime_jp_a) %></td>
+                    <td><%= link_to "詳細", plan %></td>
+                    <td><%= link_to "編集", [:edit, plan] %></td>
+                    <td><%= link_to "削除", plan, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>予定合計　<%= Plan.count %> 件</th>
+                <th>本日の日付 <%= Date.today %> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+    </table>
