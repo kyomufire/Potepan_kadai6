@@ -58,5 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-i18n'
 gem "pry-rails"
 gem 'bootstrap'
-gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 gem 'jquery-rails'
