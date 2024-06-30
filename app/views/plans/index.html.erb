@@ -44,7 +44,7 @@
 							<%= plan.allday ? "○" : "" %>
 						</td>
 						<td>
-							<%= plan.updated_at.to_s(:datetime_jp_a) %>
+							<%= plan.updated_at.to_formatted_s(:datetime_jp_a) %>
 						</td>
 						<td>
 							<%= link_to "詳細" , plan %>

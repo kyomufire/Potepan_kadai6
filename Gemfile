@@ -4,15 +4,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.7', '>= 6.1.7.2'
+gem 'rails', '~> 7.1.3.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 6.4', '>= 6.4.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/jsbundling-rails/blob/main/docs/switch_from_webpacker.md
+gem 'jsbundling-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -59,3 +59,7 @@ gem 'rails-i18n'
 gem "pry-rails"
 gem 'bootstrap'
 gem 'jquery-rails'
+
+gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "pg", "~> 1.5"
