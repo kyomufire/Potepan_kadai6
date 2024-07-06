@@ -63,3 +63,7 @@ gem 'jquery-rails'
 gem "dockerfile-rails", ">= 1.6", :group => :development
 
 gem "pg", "~> 1.5"
+
+gem "importmap-rails"
+gem "turbo-rails"
+gem "stimulus-rails"

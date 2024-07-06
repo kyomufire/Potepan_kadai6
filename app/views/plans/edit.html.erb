@@ -54,6 +54,12 @@
 				<li>
 					<%= link_to "キャンセル" , :plans %>
 				</li>
+				<li>
+				
+				</li>
+				<li>
+					<%= link_to "削除" , data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+				</li>
 			</ul>
 		</div>
 		<% end %>
